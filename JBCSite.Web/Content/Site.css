@@ -22,3 +22,10 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.jumbotron {
+    background-image: url("../content/Img/sunriseWebCrop.jpg");
+    background-size: cover;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    text-align:right;
+}
