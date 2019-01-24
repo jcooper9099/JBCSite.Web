@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBCSite.Services", "JBCSite
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBCSite.Viewmodels", "JBCSite.Viewmodels\JBCSite.Viewmodels.csproj", "{02C8A169-A5B5-4273-82DC-C8C8A61A0261}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBCSite.Infrastructure", "JBCSite.Infrastructure\JBCSite.Infrastructure.csproj", "{884D8070-1FF5-4182-8662-12BF382E8A68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{02C8A169-A5B5-4273-82DC-C8C8A61A0261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02C8A169-A5B5-4273-82DC-C8C8A61A0261}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02C8A169-A5B5-4273-82DC-C8C8A61A0261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{884D8070-1FF5-4182-8662-12BF382E8A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{884D8070-1FF5-4182-8662-12BF382E8A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{884D8070-1FF5-4182-8662-12BF382E8A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{884D8070-1FF5-4182-8662-12BF382E8A68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
