@@ -228,6 +228,14 @@
       <Project>{95bbc1bf-b497-4e9e-a5ee-b1122d7d790a}</Project>
       <Name>JBCSite.Domain.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\JBCSite.Services\JBCSite.Services.csproj">
+      <Project>{e16b9452-b6ca-43f1-88d4-99216c562612}</Project>
+      <Name>JBCSite.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JBCSite.Viewmodels\JBCSite.Viewmodels.csproj">
+      <Project>{02c8a169-a5b5-4273-82dc-c8c8a61a0261}</Project>
+      <Name>JBCSite.Viewmodels</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
