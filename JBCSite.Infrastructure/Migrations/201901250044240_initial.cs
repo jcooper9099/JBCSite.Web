@@ -8,7 +8,7 @@ namespace JBCSite.Infrastructure.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.DemoInfo",
+                "dbo.DemoSummaries",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -33,10 +33,10 @@ namespace JBCSite.Infrastructure.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.DemoInfoes", "DemoId", "dbo.DemoObjects");
-            DropIndex("dbo.DemoInfoes", new[] { "DemoId" });
+            DropForeignKey("dbo.DemoSummaries", "DemoId", "dbo.DemoObjects");
+            DropIndex("dbo.DemoSummaries", new[] { "DemoId" });
             DropTable("dbo.DemoObjects");
-            DropTable("dbo.DemoInfoes");
+            DropTable("dbo.DemoSummaries");
         }
     }
 }

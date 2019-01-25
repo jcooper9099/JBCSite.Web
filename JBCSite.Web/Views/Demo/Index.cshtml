@@ -1,0 +1,19 @@
+﻿@model JBCSite.Viewmodels.DemoListViewModel
+<div class="jumbotron">
+    <h1>jaredcooper.us</h1>
+    <p class="lead">Jared Cooper is a seasoned .Net full stack developer specializing in MVC webapps and RESTful apis</p>
+</div>
+<div class="row">
+    @foreach (var summary in Model.InfoList)
+    {
+        <div class="col-xs-12">
+            <div class="col-xs-3">
+                <h4>@summary.DemoTitle</h4>
+            </div>
+            <div class="col-xs-6">
+                <h4>@summary.DemoDescription</h4>
+            </div>
+        </div>
+    }
+</div>
+

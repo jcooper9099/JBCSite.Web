@@ -41,7 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DemoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JBCSite.Domain.Models\JBCSite.Domain.Models.csproj">
+      <Project>{95bbc1bf-b497-4e9e-a5ee-b1122d7d790a}</Project>
+      <Name>JBCSite.Domain.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JBCSite.Infrastructure\JBCSite.Infrastructure.csproj">
+      <Project>{884d8070-1ff5-4182-8662-12bf382e8a68}</Project>
+      <Name>JBCSite.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

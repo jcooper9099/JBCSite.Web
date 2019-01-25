@@ -9,7 +9,7 @@ namespace JBCSite.Domain.Models
     /// <summary>
     /// Summary information for Demo objects
     /// </summary>
-    public class DemoInfo
+    public class DemoSummary
     {
         /// <summary>
         /// For persisting the object in the Db

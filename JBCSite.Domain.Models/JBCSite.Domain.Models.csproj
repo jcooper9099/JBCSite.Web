@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DemoInfo.cs" />
+    <Compile Include="DemoSummary.cs" />
     <Compile Include="DemoObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -4,6 +4,7 @@ namespace JBCSite.Infrastructure.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using JBCSite.Domain.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<JBCSite.Infrastructure.JBCSiteContext>
     {
@@ -12,20 +13,29 @@ namespace JBCSite.Infrastructure.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(JBCSite.Infrastructure.JBCSiteContext context)
+        protected override void Seed(JBCSiteContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            if (System.Diagnostics.Debugger.IsAttached == false)
+            {
+                System.Diagnostics.Debugger.Launch();
+            }
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            var demo = new DemoObject
+            {
+                DemoText = @"<p>This demonstration is about MVC itself and how it can be 
+                            sed as a powerful way to quickly get ideas from 
+                            conception to reality"
+            };            
+
+            var demoInfo = new DemoSummary
+            {
+                DemoTitle = "Basic MVC Skills",
+                DemoDescription = "A post to show basic familarity with MVC",
+                Demo = demo
+            };
+
+            context.DemoSummaries.Add(demoInfo);
+            context.SaveChanges();
         }
     }
 }

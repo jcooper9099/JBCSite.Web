@@ -13,7 +13,7 @@ namespace JBCSite.Infrastructure.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201901250012553_initial"; }
+            get { return "201901250044240_initial"; }
         }
         
         string IMigrationMetadata.Source

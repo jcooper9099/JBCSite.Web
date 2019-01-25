@@ -9,6 +9,6 @@ namespace JBCSite.Viewmodels
 {
     public class DemoListViewModel
     {
-        public List<DemoInfo> InfoList { get; set; } = new List<DemoInfo>();
+        public List<DemoSummary> InfoList { get; set; } = new List<DemoSummary>();
     }
 }
