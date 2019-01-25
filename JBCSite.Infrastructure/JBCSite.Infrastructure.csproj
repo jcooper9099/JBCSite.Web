@@ -40,6 +40,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JBCSiteContext.cs" />
+    <Compile Include="Migrations\201901250012553_initial.cs" />
+    <Compile Include="Migrations\201901250012553_initial.Designer.cs">
+      <DependentUpon>201901250012553_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +67,11 @@
       <Project>{95bbc1bf-b497-4e9e-a5ee-b1122d7d790a}</Project>
       <Name>JBCSite.Domain.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901250012553_initial.resx">
+      <DependentUpon>201901250012553_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
