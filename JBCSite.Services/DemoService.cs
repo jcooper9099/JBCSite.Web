@@ -12,7 +12,7 @@ namespace JBCSite.Services
     /// <summary>
     /// A class for dealing with demo (and related) objects
     /// </summary>
-    public class DemoService : IDisposable
+    public class DemoService : IDisposable, IDemoService
     {
         private bool _disposed;
         private IRepository<DemoSummary> _summaryRepo;

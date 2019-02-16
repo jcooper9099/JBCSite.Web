@@ -7,7 +7,12 @@ namespace JBCSite.Web.Controllers
 {
     public class DemoController : Controller
     {
-        private DemoService _demoService = new DemoService();
+        private DemoService _demoService;
+
+        public DemoController(IDemoService demoService)
+        {
+            _demoService = (DemoService)demoService;
+        }
 
         // GET: Demo
         public ActionResult Index()
