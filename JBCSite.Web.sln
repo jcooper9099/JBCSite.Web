@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBCSite.Viewmodels", "JBCSi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBCSite.Infrastructure", "JBCSite.Infrastructure\JBCSite.Infrastructure.csproj", "{884D8070-1FF5-4182-8662-12BF382E8A68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBCSite.Auth", "JBCSite.Auth\JBCSite.Auth.csproj", "{8E704537-8576-4422-83C0-95CDEBA5C351}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{884D8070-1FF5-4182-8662-12BF382E8A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{884D8070-1FF5-4182-8662-12BF382E8A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{884D8070-1FF5-4182-8662-12BF382E8A68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E704537-8576-4422-83C0-95CDEBA5C351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E704537-8576-4422-83C0-95CDEBA5C351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E704537-8576-4422-83C0-95CDEBA5C351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E704537-8576-4422-83C0-95CDEBA5C351}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

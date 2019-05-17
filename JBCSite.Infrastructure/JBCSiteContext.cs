@@ -1,11 +1,7 @@
 namespace JBCSite.Infrastructure
 {
-    using System;
-    using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
     using JBCSite.Domain.Models;
-    using JBCSite.Infrastructure.Repository;
+    using System.Data.Entity;
 
     public partial class JBCSiteContext : DbContext
     {
