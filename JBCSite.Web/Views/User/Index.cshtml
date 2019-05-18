@@ -1,0 +1,35 @@
+﻿@model JBCSite.Web.ViewModels.CreateUserViewModel
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create User</h2>
+@using (Html.BeginForm("Create", "User", FormMethod.Post))
+{
+    <row>
+        <div class="col-xs-3">UserName</div>
+        <div class="col-xs-9">
+            @Html.TextBoxFor(model => model.UserName)
+        </div>
+    </row>
+    <row>
+        <div class="col-xs-3">Email</div>
+        <div class="col-xs-9">
+            @Html.TextBoxFor(model => model.Email, htmlAttributes: new { type = "email" })
+        </div>
+    </row>
+    <row>
+        <div class="col-xs-3">Password</div>
+        <div class="col-xs-9">
+            @Html.TextBoxFor(model => model.Password, htmlAttributes: new { type = "password" })
+        </div>
+    </row>
+    <row>
+        <div class="col-xs-3">&nbsp;</div>
+        <div class="col-xs-9">
+            <input type="submit" value="Submit" id="btnSubmit" />
+        </div>
+    </row>
+}
+

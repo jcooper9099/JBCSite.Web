@@ -9,10 +9,10 @@ namespace JBCSite.Infrastructure.UnitOfWork
 {
     public class JBCSiteDbFactory : IDbFactory, IDisposable
     {
-
         private bool _disposed;
 
-        protected IDbContext context;
+        protected IDbContext context;        
+
         public void Dispose()
         {
             throw new NotImplementedException();
@@ -23,8 +23,8 @@ namespace JBCSite.Infrastructure.UnitOfWork
             if(context == null)
             {
                 context = new JBCSiteContext();
-            }
+            }            
             return context;
-        }
+        }        
     }
 }

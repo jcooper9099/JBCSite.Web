@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JBCSite.Domain.Models;
 using JBCSite.Infrastructure.Repository;
 using JBCSite.Infrastructure.UnitOfWork;
-using JBCSite.Domain.Models;
-using JBCSite.Infrastructure;
+using System;
+using System.Collections.Generic;
+
 namespace JBCSite.Services
 {
     /// <summary>
@@ -48,7 +45,7 @@ namespace JBCSite.Services
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Dispose(true);
         }
 
         protected virtual void Dispose(bool disposing)

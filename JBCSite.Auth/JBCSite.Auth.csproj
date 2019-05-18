@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -85,6 +85,9 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -96,9 +99,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthContext.cs" />
-    <Compile Include="Migrations\201905170346292_Initial.cs" />
-    <Compile Include="Migrations\201905170346292_Initial.Designer.cs">
-      <DependentUpon>201905170346292_Initial.cs</DependentUpon>
+    <Compile Include="IAuthContext.cs" />
+    <Compile Include="Migrations\201905180325267_Empty.cs" />
+    <Compile Include="Migrations\201905180325267_Empty.Designer.cs">
+      <DependentUpon>201905180325267_Empty.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Archive.cs" />
     <Compile Include="Migrations\Archive05162019.cs">
@@ -126,8 +130,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905170346292_Initial.resx">
-      <DependentUpon>201905170346292_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905180325267_Empty.resx">
+      <DependentUpon>201905180325267_Empty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

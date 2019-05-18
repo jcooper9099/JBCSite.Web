@@ -191,10 +191,12 @@
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CreateUserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -239,6 +241,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Demo\Index.cshtml" />
     <Content Include="Views\Content\CreateContent.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\CreateComplete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -258,9 +262,17 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JBCSite.Auth\JBCSite.Auth.csproj">
+      <Project>{8e704537-8576-4422-83c0-95cdeba5c351}</Project>
+      <Name>JBCSite.Auth</Name>
+    </ProjectReference>
     <ProjectReference Include="..\JBCSite.Domain.Models\JBCSite.Domain.Models.csproj">
       <Project>{95bbc1bf-b497-4e9e-a5ee-b1122d7d790a}</Project>
       <Name>JBCSite.Domain.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JBCSite.Dto\JBCSite.Dto.csproj">
+      <Project>{b618b8a0-ef44-4c51-9acb-daa6fd71e95d}</Project>
+      <Name>JBCSite.Dto</Name>
     </ProjectReference>
     <ProjectReference Include="..\JBCSite.Services\JBCSite.Services.csproj">
       <Project>{e16b9452-b6ca-43f1-88d4-99216c562612}</Project>

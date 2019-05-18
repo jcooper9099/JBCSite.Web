@@ -1,8 +1,6 @@
-﻿using System;
-using System.Data.Entity;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity.Migrations;
-using System.Linq;
-using Microsoft.AspNet.Identity.EntityFramework;
+
 
 namespace JBCSite.Auth.Migrations
 {

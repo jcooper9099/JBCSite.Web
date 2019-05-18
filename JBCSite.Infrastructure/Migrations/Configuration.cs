@@ -36,6 +36,8 @@ namespace JBCSite.Infrastructure.Migrations
 
             context.DemoSummaries.Add(demoInfo);
             context.SaveChanges();
+
+        
         }
     }
 }

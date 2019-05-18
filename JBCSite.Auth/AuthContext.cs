@@ -1,21 +1,14 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JBCSite.Auth.Models;
+﻿using JBCSite.Auth.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 
 namespace JBCSite.Auth
 {
-    public class AuthContext : IdentityDbContext<AppUser>
+    public partial class AuthContext : IdentityDbContext
     {
         public AuthContext() : base("name=AuthContext")
         {
-        }
 
-        
-
+        }        
     }
 }
