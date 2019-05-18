@@ -69,6 +69,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blog.cs" />
+    <Compile Include="BlogUser.cs" />
     <Compile Include="DemoSummary.cs" />
     <Compile Include="DemoObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

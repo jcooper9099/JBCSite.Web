@@ -14,6 +14,9 @@ namespace JBCSite.Infrastructure
 
         public DbSet<DemoObject> DemoObjects { get; set; }
 
+        public DbSet<Blog> Blogs { get; set; }
+
+        public DbSet<BlogUser> BlogUsers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

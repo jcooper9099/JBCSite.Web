@@ -26,6 +26,8 @@ namespace JBCSite.Auth.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            Archive.SetInitialRoles(context);
         }
     }
 }
