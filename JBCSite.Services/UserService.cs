@@ -1,5 +1,4 @@
 ﻿using JBCSite.Auth;
-using JBCSite.Auth.Models;
 using JBCSite.Dto;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;

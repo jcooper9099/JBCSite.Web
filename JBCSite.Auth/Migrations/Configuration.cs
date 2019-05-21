@@ -14,6 +14,11 @@ namespace JBCSite.Auth.Migrations
 
         protected override void Seed(JBCSite.Auth.AuthContext context)
         {
+
+            if (System.Diagnostics.Debugger.IsAttached == false)
+            {
+                System.Diagnostics.Debugger.Launch();
+            }
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

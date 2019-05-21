@@ -100,17 +100,25 @@
   <ItemGroup>
     <Compile Include="AuthContext.cs" />
     <Compile Include="IAuthContext.cs" />
-    <Compile Include="Migrations\201905180325267_Empty.cs" />
-    <Compile Include="Migrations\201905180325267_Empty.Designer.cs">
-      <DependentUpon>201905180325267_Empty.cs</DependentUpon>
+    <Compile Include="Migrations\201905210153470_Initial.cs" />
+    <Compile Include="Migrations\201905210153470_Initial.Designer.cs">
+      <DependentUpon>201905210153470_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905210228384_AppPermissions.cs" />
+    <Compile Include="Migrations\201905210228384_AppPermissions.Designer.cs">
+      <DependentUpon>201905210228384_AppPermissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905210230487_RolePermissions.cs" />
+    <Compile Include="Migrations\201905210230487_RolePermissions.Designer.cs">
+      <DependentUpon>201905210230487_RolePermissions.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Archive.cs" />
     <Compile Include="Migrations\Archive05162019.cs">
       <DependentUpon>Archive.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AppRole.cs" />
-    <Compile Include="Models\AppUser.cs" />
+    <Compile Include="Models\AppPermission.cs" />
+    <Compile Include="Models\RolePermission.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,8 +138,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905180325267_Empty.resx">
-      <DependentUpon>201905180325267_Empty.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905210153470_Initial.resx">
+      <DependentUpon>201905210153470_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905210228384_AppPermissions.resx">
+      <DependentUpon>201905210228384_AppPermissions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905210230487_RolePermissions.resx">
+      <DependentUpon>201905210230487_RolePermissions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

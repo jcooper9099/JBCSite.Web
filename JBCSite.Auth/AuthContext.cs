@@ -1,6 +1,6 @@
-﻿using JBCSite.Auth.Models;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
+using JBCSite.Auth.Models;
 
 namespace JBCSite.Auth
 {
@@ -9,6 +9,10 @@ namespace JBCSite.Auth
         public AuthContext() : base("name=AuthContext")
         {
 
-        }        
+        }
+
+        public DbSet<AppPermission> Permissions { get; set; }
+
+        DbSet<RolePermission> RolePermissions { get; set; }
     }
 }
