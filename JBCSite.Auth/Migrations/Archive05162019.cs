@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity.Migrations;
 
-
 namespace JBCSite.Auth.Migrations
 {
     public partial class Archive

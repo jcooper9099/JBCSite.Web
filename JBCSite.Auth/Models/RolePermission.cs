@@ -10,7 +10,7 @@ namespace JBCSite.Auth.Models
         public Guid PermissionId { get; set; }
 
         [ForeignKey(nameof(PermissionId))]
-        public AppPermission Permission { get; set; }
+        public Permission Permission { get; set; }
 
     }
 }

@@ -33,6 +33,7 @@ namespace JBCSite.Auth.Migrations
             //
 
             Archive.SetInitialRoles(context);
+            Archive.SetInitialPermissions(context);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace JBCSite.Auth
 
         }
 
-        public DbSet<AppPermission> Permissions { get; set; }
+        public DbSet<Permission> Permissions { get; set; }
 
         DbSet<RolePermission> RolePermissions { get; set; }
     }

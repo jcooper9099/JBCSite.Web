@@ -1,15 +1,14 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JBCSite.Auth.Models
 {
-    public class AppPermission
+    public class Permission
     {
         public Guid Id { get; set; }
 
         public string Name { get; set; }
 
-        //[StringLength(512)]
         public string Description { get; set; }
     }
 }

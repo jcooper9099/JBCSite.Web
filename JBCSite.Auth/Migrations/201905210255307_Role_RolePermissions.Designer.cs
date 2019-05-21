@@ -7,13 +7,13 @@ namespace JBCSite.Auth.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class RolePermissions : IMigrationMetadata
+    public sealed partial class Role_RolePermissions : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(RolePermissions));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Role_RolePermissions));
         
         string IMigrationMetadata.Id
         {
-            get { return "201905210230487_RolePermissions"; }
+            get { return "201905210255307_Role_RolePermissions"; }
         }
         
         string IMigrationMetadata.Source
