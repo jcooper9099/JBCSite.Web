@@ -7,22 +7,16 @@ using JBCSite.Infrastructure.Repository;
 
 namespace JBCSite.Infrastructure.UnitOfWork
 {
-    public class JBCSiteDbFactory : IDbFactory, IDisposable
+    public class DbFactory : IDbFactory, IDisposable
     {
         private bool _disposed;
         protected Dictionary<string, IDbContext> contextCollection = new Dictionary<string, IDbContext>();
-        protected IDbContext context;        
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
+        protected IDbContext context;
 
         public IDbContext Init(string connectionName)
         {
             return GetContext(connectionName);
         }
-
 
         /// <summary>
         /// Something of a singleton pattern here to ensure the context is initated only once
@@ -31,7 +25,7 @@ namespace JBCSite.Infrastructure.UnitOfWork
         {
             if (contextCollection.ContainsKey(connectionName))
             {
-                if (contextCollection[connectionName] == null)
+                if (contextCollection[connectionName] == null || contextCollection[connectionName].IsDisposed)
                 {
                     contextCollection[connectionName] = new SiteContext(connectionName);
                 }
@@ -42,6 +36,25 @@ namespace JBCSite.Infrastructure.UnitOfWork
             }
 
             return contextCollection[connectionName];
+        }
+
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                if (disposing)
+                {
+                    context.Dispose();
+                }
+
+                _disposed = true;
+            }
         }
     }
 }

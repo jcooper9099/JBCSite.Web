@@ -19,7 +19,6 @@ namespace JBCSite.Services
 
         public DemoService()
         {
-
             _unitOfWork = new UnitOfWork<DbFactory>(ConfigurationManager.AppSettings["DefaultServiceContext"]);
             _summaryRepo = _unitOfWork.GetRepository<DemoSummary>();
             _demoObjectRepo = _unitOfWork.GetRepository<DemoObject>();

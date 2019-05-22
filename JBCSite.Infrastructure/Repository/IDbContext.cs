@@ -11,6 +11,8 @@ namespace JBCSite.Infrastructure.Repository
 {
     public interface IDbContext: IDisposable
     {
+        bool IsDisposed { get; set; }
+
         DbSet<T> Set<T>() where T: class;
 
         DbEntityEntry<T> Entry<T>(T entity) where T : class;
@@ -19,6 +21,6 @@ namespace JBCSite.Infrastructure.Repository
 
         Task<int> SaveChangesAsync();
 
-        SqlProviderServices SqlProviderInstance { get; }
+        SqlProviderServices GetSqlProviderInstance();
     }
 }
