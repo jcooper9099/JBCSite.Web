@@ -11,9 +11,9 @@ namespace JBCSite.Infrastructure.UnitOfWork
     {
         private bool _disposed;
         private IDbContext _context;
+        private string _contextName;
 
         public IDbFactory DbFactory { get; } = new TDbFactory();
-
         /// <summary>
         /// Something of a singleton pattern here to ensure the context is initated only once
         /// </summary>
@@ -23,11 +23,16 @@ namespace JBCSite.Infrastructure.UnitOfWork
             {
                 if (_context == null)
                 {
-                    _context = DbFactory.Init();
+                    _context = DbFactory.Init(_contextName);
                 }
 
                 return _context;
             }
+        }
+
+        public UnitOfWork(string contextName)
+        {
+            _contextName = contextName;
         }
 
         private Dictionary<Type, object> _repositories = new Dictionary<Type, object>();
@@ -40,7 +45,7 @@ namespace JBCSite.Infrastructure.UnitOfWork
         public async Task<int> CommitAsync()
         {
             return await Context.SaveChangesAsync();
-        }   
+        }
 
         public IRepository<TEntity> GetRepository<TEntity>() where TEntity : class
         {
@@ -92,5 +97,5 @@ namespace JBCSite.Infrastructure.UnitOfWork
                 _disposed = true;
             }
         }
-    }
+    }    
 }

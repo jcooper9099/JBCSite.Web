@@ -6,14 +6,14 @@ namespace JBCSite.Infrastructure.Migrations
     using System.Linq;
     using JBCSite.Domain.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<JBCSite.Infrastructure.JBCSiteContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<JBCSite.Infrastructure.SiteContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(JBCSiteContext context)
+        protected override void Seed(SiteContext context)
         {
             if (System.Diagnostics.Debugger.IsAttached == false)
             {

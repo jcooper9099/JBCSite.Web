@@ -1,14 +1,20 @@
 namespace JBCSite.Infrastructure
 {
     using JBCSite.Domain.Models;
+    using JBCSite.Infrastructure.Repository;
     using System.Data.Entity;
 
-    public partial class JBCSiteContext : DbContext
+    public partial class SiteContext : System.Data.Entity.DbContext, IDbContext
     {
-        public JBCSiteContext()
+        public SiteContext()
             : base("name=JBCSiteContext")
         {
-        }        
+        }
+        
+        public SiteContext(string qualifiedName): base($"name={qualifiedName}")
+        {
+
+        }
 
         public DbSet<DemoSummary> DemoSummaries { get; set; }
 

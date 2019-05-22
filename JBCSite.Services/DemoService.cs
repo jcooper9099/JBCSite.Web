@@ -3,6 +3,7 @@ using JBCSite.Infrastructure.Repository;
 using JBCSite.Infrastructure.UnitOfWork;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace JBCSite.Services
 {
@@ -14,11 +15,12 @@ namespace JBCSite.Services
         private bool _disposed;
         private IRepository<DemoSummary> _summaryRepo;
         private IRepository<DemoObject> _demoObjectRepo;
-        private IUnitOfWork<JBCSiteDbFactory> _unitOfWork;
+        private IUnitOfWork<DbFactory> _unitOfWork;
 
         public DemoService()
         {
-            _unitOfWork = new UnitOfWork<JBCSiteDbFactory>();
+
+            _unitOfWork = new UnitOfWork<DbFactory>(ConfigurationManager.AppSettings["DefaultServiceContext"]);
             _summaryRepo = _unitOfWork.GetRepository<DemoSummary>();
             _demoObjectRepo = _unitOfWork.GetRepository<DemoObject>();
         }

@@ -7,6 +7,6 @@ namespace JBCSite.Infrastructure.UnitOfWork
     /// </summary>
     public interface IDbFactory
     {
-        IDbContext Init();
+        IDbContext Init(string connectionName);
     }
 }

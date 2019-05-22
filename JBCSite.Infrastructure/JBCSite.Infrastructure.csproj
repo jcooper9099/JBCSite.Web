@@ -93,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbContextImplementation.cs" />
-    <Compile Include="JBCSiteContext.cs" />
+    <Compile Include="SiteContext.cs" />
     <Compile Include="Migrations\201901250044240_initial.cs" />
     <Compile Include="Migrations\201901250044240_initial.Designer.cs">
       <DependentUpon>201901250044240_initial.cs</DependentUpon>
@@ -107,7 +107,7 @@
     <Compile Include="Repository\GenericDbRespository.cs" />
     <Compile Include="Repository\IDbContext.cs" />
     <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="UnitOfWork\JBCSiteDbFactory.cs" />
+    <Compile Include="UnitOfWork\DbFactory.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
     <Compile Include="UnitOfWork\IDbFactory.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />

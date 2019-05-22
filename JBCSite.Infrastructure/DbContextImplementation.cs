@@ -8,7 +8,7 @@ using System.Data.Entity.SqlServer;
 
 namespace JBCSite.Infrastructure
 {
-    public partial class JBCSiteContext : IDbContext
+    public partial class SiteContext : IDbContext
     {
         public SqlProviderServices SqlProviderInstance { get { return SqlProviderServices.Instance; } }
     }

@@ -12,13 +12,13 @@ namespace JBCSite.Web
         {
 			var container = new UnityContainer();
 
-            container.RegisterType<IDemoService, DemoService>();
-            container.RegisterType<IUserService, UserService>();
-           
-            
             // register all your components with the container here
             // it is NOT necessary to register your controllers
-            
+
+
+            container.RegisterType<IDemoService, DemoService>();
+            container.RegisterType<IUserService, UserService>();
+
             // e.g. container.RegisterType<ITestService, TestService>();
             
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
