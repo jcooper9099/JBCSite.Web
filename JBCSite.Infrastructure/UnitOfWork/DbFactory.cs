@@ -11,34 +11,17 @@ namespace JBCSite.Infrastructure.UnitOfWork
     {
         private bool _disposed;
         protected Dictionary<string, IDbContext> contextCollection = new Dictionary<string, IDbContext>();
-        protected IDbContext context;
+        protected IDbContext Context;
 
         public IDbContext Init(string connectionName)
         {
-            return GetContext(connectionName);
-        }
-
-        /// <summary>
-        /// Something of a singleton pattern here to ensure the context is initated only once
-        /// </summary>
-        private IDbContext GetContext(string connectionName)
-        {
-            if (contextCollection.ContainsKey(connectionName))
+            if (Context == null)
             {
-                if (contextCollection[connectionName] == null || contextCollection[connectionName].IsDisposed)
-                {
-                    contextCollection[connectionName] = new SiteContext(connectionName);
-                }
+                Context = new SiteContext(connectionName);
             }
-            else
-            {
-                contextCollection.Add(connectionName, new SiteContext(connectionName));
-            }
-
-            return contextCollection[connectionName];
+            return Context;
         }
-
-
+        
         public void Dispose()
         {
             Dispose(true);
@@ -50,7 +33,7 @@ namespace JBCSite.Infrastructure.UnitOfWork
             {
                 if (disposing)
                 {
-                    context.Dispose();
+                   
                 }
 
                 _disposed = true;
